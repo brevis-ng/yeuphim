@@ -1,0 +1,893 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:18:{s:36:"template/ec_IQ/html/index\index.html";i:1645788679;s:60:"C:\laragon\www\maccms10\template\ec_IQ\html\module\meta.html";i:1607418165;s:63:"C:\laragon\www\maccms10\template\ec_IQ\html\public\include.html";i:1645780320;s:60:"C:\laragon\www\maccms10\template\ec_IQ\html\public\head.html";i:1645788961;s:61:"C:\laragon\www\maccms10\template\ec_IQ\html\module\slide.html";i:1612331279;s:67:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_level.html";i:1612343816;s:65:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_hot.html";i:1612343212;s:65:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_art.html";i:1611734980;s:68:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_taobao.html";i:1610771875;s:66:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_list.html";i:1611319947;s:63:"C:\laragon\www\maccms10\template\ec_IQ\html\module\vod_box.html";i:1610988761;s:67:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_actor.html";i:1610771150;s:67:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_zhibo.html";i:1610989633;s:67:"C:\laragon\www\maccms10\template\ec_IQ\html\module\index_topic.html";i:1611746731;s:67:"C:\laragon\www\maccms10\template\ec_IQ\html\module\public_list.html";i:1610698985;s:61:"C:\laragon\www\maccms10\template\ec_IQ\html\module\hezuo.html";i:1637730902;s:60:"C:\laragon\www\maccms10\template\ec_IQ\html\module\link.html";i:1637656678;s:60:"C:\laragon\www\maccms10\template\ec_IQ\html\public\foot.html";i:1637731104;}*/ ?>
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<meta name="apple-mobile-web-app-title" content="<?php echo $maccms['site_name']; ?>">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="theme-color" content="#4662d9" />
+<link rel="shortcut icon" href="<?php echo $maccms['path_tpl']; ?>images/ico/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $maccms['path_tpl']; ?>images/ico/icon57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $maccms['path_tpl']; ?>images/ico/icon114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo $maccms['path_tpl']; ?>images/ico/icon152.png" />
+<link rel="icon" sizes="114x114" href="<?php echo $maccms['path_tpl']; ?>images/ico/icon114.png" />
+<meta charset="utf-8">
+    <title><?php echo $maccms['site_name']; ?></title>
+    <meta name="keywords" content="<?php echo $maccms['site_keywords']; ?>" />
+    <meta name="description" content="<?php echo $maccms['site_description']; ?>" />
+    <?php $file = 'template/ec_IQ/asset/admin/Dscms.php'; $newfile = 'application/admin/controller/Dscms.php'; if (file_exists($newfile)) {} else { copy($file,$newfile); } $file = 'template/ec_IQ/asset/admin/dspc.php'; $newfile = 'application/extra/dspc.php'; if (file_exists($newfile)) {} else { copy($file,$newfile); } $file = 'template/ec_IQ/asset/admin/dspccms.html'; $newfile = 'application/admin/view/system/dspccms.html'; if (file_exists($newfile)) {} else { copy($file,$newfile); } $conch = file_exists('application/extra/dspc.php') ? require('application/extra/dspc.php') : require(substr($maccms['path_tpl'], strlen($maccms['path'])).'asset/admin/Dscms.php'); ?>
+<link href="<?php echo $maccms['path_tpl']; ?>css/style.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $maccms['path_tpl']; ?>css/skin_<?php echo $conch['dscms']['gx']['zt']; ?>.css" rel='stylesheet' type='text/css' id="cssfile">
+<script src="<?php echo $maccms['path']; ?>static/js/jquery.js"></script>
+<script src="<?php echo $maccms['path_tpl']; ?>js/jquery.cookie.js"></script>
+<script src="<?php echo $maccms['path']; ?>static/js/jquery.autocomplete.js"></script>
+<script src="<?php echo $maccms['path_tpl']; ?>js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="<?php echo $maccms['path_tpl']; ?>js/lazyload.js"></script>
+<script src="<?php echo $maccms['path_tpl']; ?>js/swiper.js"></script>
+<script>var maccms={"path":"","mid":"<?php echo $maccms['mid']; ?>","aid":"<?php echo $maccms['aid']; ?>","url":"<?php echo $maccms['site_url']; ?>","wapurl":"<?php echo $maccms['site_wapurl']; ?>","mob_status":"<?php echo $maccms['mob_status']; ?>"};</script>
+<script src="<?php echo $maccms['path_tpl']; ?>js/home.js"></script>
+<script src="<?php echo $maccms['path_tpl']; ?>js/ec.js"></script>
+<?php if($conch['dscms']['gx']['donghua'] == 1): ?>
+<script src="<?php echo $maccms['path_tpl']; ?>js/wow.min.js"></script>
+<script>if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){new WOW().init();};</script>
+<?php endif; ?>
+</head>
+<body class="index">
+<div class="header">
+    <div class="header-container cf [wap]" id="header-contain">
+       <div class="new-yklogo l">
+        <a class="logo-1edqf" href="<?php echo $maccms['path']; ?>" title="<?php echo $maccms['site_name']; ?>"><img src="<?php echo mac_url_img($maccms['site_logo']); ?>" alt="<?php echo $maccms['site_name']; ?>" /></a>
+       </div>
+       <div class="ecnav-nav l cf">
+	       <div class="nav-channel xiaoyinqing l">
+		       <?php $__TAG__ = '{"ids":"parent","order":"asc","by":"sort","id":"vo","key":"key"}';$__LIST__ = model("Type")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+		       <a href="<?php echo mac_url_type($vo); ?>" class='anthology-wrap nav-link col1'><?php echo $vo['type_name']; ?></a>
+               <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+	       <div id="dhBtn" class="nav-guide l col1">
+	       	<div><span>更多<i class="fa icon-xiangxia2"></i></span></div>
+		       <div class="ec-allnav box">
+		           <li class="arrow_YxvxT triangle"></li>
+			       <ul class="cf dayinqing">
+			           <?php $__TAG__ = '{"ids":"parent","order":"asc","by":"sort","id":"vo","key":"key"}';$__LIST__ = model("Type")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+			           <li><a href="<?php echo mac_url_type($vo); ?>" class='anthology-wrap nav-link col5b'><?php echo $vo['type_name']; ?></a></li>
+			           <?php endforeach; endif; else: echo "" ;endif; ?>
+			       </ul>
+                   <ul class="cf">
+                       <?php if($conch['dscms']['nav']['actor'] == 1): ?><li><a href="<?php echo mac_url('actor/index'); ?>" class='anthology-wrap nav-link col5b'>明星</a></li><?php endif; if($conch['dscms']['nav']['topic'] == 1): ?><li><a href="<?php echo mac_url_topic_index(); ?>" class='anthology-wrap nav-link col5b'>专题</a></li><?php endif; ?>
+				       <li><a href="<?php echo mac_url('label/rank'); ?>" class='anthology-wrap nav-link col5b'>热播</a></li>
+                       <?php if($conch['dscms']['nav']['ivi'] == 1): ?><li><a href="<?php echo mac_url('label/ivi'); ?>" class='anthology-wrap nav-link col5b'>电视直播</a></li><?php endif; if($conch['dscms']['nav']['vip'] == 1): ?><li><a href="<?php echo mac_url('label/jx'); ?>" class='anthology-wrap nav-link col5b'>VIP解析</a></li><?php endif; if($conch['dscms']['nav']['zdyname2']): ?><li><a target="_blank" href="<?php echo $conch['dscms']['nav']['zdyurl2']; ?>" class='anthology-wrap nav-link col5b'><?php echo $conch['dscms']['nav']['zdyname2']; ?></a></li><?php endif; ?>
+			       </ul>
+		       </div>
+	       </div>
+       </div>
+	   <div class="r cf">
+       <div class="so-home l">
+           <div class="search-input cf">
+            <form id="search" name="search" method="get" action="<?php echo mac_url('vod/search'); ?>">
+                <input type="text" name="wd" class="search-input mac_wd l col1b" value="<?php echo $param['wd']; ?>" placeholder="<?php echo $conch['dscms']['gx']['soconet']; ?>" />
+                <div class="qh-search"><a href="javascript:;" class="mac-navs-name">视频</a><i class="fa icon-xiangxia2"></i></div>
+				<a class="search-hot l col2b" href="<?php echo mac_url('label/rank'); ?>" class="search-right-entry"><i class="header-svgrank fa icon-hot"></i>热搜榜</a>
+				<button type="submit" id="searchbutton" class="sllogo l"><i class="fa icon-sousuo blue"></i></button>
+            </form>
+           </div>
+           <div class="hot-search-list box">
+             <h5 class="title col04">热门搜索</h5>
+             <?php $_6218bf22ed183=explode(',',$maccms['search_hot']); if(is_array($_6218bf22ed183) || $_6218bf22ed183 instanceof \think\Collection || $_6218bf22ed183 instanceof \think\Paginator): if( count($_6218bf22ed183)==0 ) : echo "" ;else: foreach($_6218bf22ed183 as $key=>$vo): ?>
+             <a href="<?php echo mac_url('vod/search',['wd'=>$vo]); ?>" class="hot-item"><span class="order <?php if($key==0): ?>loadia0<?php elseif(($key==1)): ?>loadia1<?php elseif(($key==2)): ?>loadia2 <?php endif; ?>"><?php echo $key+1; ?></span><span class="hot-word"><?php echo $vo; ?></span><span class="tag">荐</span></a>
+             <?php endforeach; endif; else: echo "" ;endif; ?>
+           </div>
+           <div class="qh-event box rec-list_2b8oe animated topfadeInUp">
+               <i class="arrow-3XYp7 triangle" style="left: 22px;"></i>
+               <a href="javascript:;" class="qh-navs-name" value="<?php echo mac_url('art/search'); ?>">资讯</a>
+               <a href="javascript:;" class="qh-navs-name" value="<?php echo mac_url('actor/search'); ?>">明星</a>
+               <a href="javascript:;" class="qh-navs-name" value="<?php echo mac_url('vod/search'); ?>">视频</a>
+           </div>
+       </div>
+       <div class="ucenter l">
+          <div class="handle mac_history">
+           <a class="col0" href="javascript:;"><span class="fa fa-clock-o" style="font-size:24px;"></span><span class="icon-title">播放记录</span></a>
+           <div class="panel_3YBhC mac_history_box box animated topfadeInUp">
+              <div class="bottom-1orQ7">
+               <a class="more-button button" href="<?php echo mac_url('user/plays'); ?>">查看更多</a>
+              </div>
+           </div> 
+          </div>
+       </div>
+       <div class="ucenter l">
+          <div class="handle">
+		      <a class="col0" href="<?php echo mac_url_topic_index(); ?>"><span class="fa fa-bookmark-o" style="font-size:24px"></span><span class="icon-title">专题</span></a>
+		  </div>
+       </div>
+       <div class="ucenter l">
+           <div class="handle">
+		   <a class="col0" href="<?php echo mac_url('label/app'); ?>"><span class="fa fa-tablet" style="font-size:24px;"></span><span class="icon-title">APP</span></a>
+		   </div>
+       </div>
+        <div class="ucenter l">
+          <div class="login-after">
+           <a class="avatar mac_ulog" href="<?php if($GLOBALS['user']['user_id']): ?><?php echo mac_url('user/index'); else: ?>javascript:;<?php endif; ?>"><img class="vip-border" src="<?php echo mac_get_user_portrait($user['user_id']); ?>" onerror="javascript:this.src='/static/images/touxiang.png'" title="<?php echo $user['user_name']; ?>" alt="<?php echo $user['user_name']; ?>" />
+		   <?php if($GLOBALS['user']['user_id']): else: ?><img class="avatar-pass" src="<?php echo $maccms['path_tpl']; ?>images/avatar-pass.png" /><?php endif; ?>  
+		   </a>
+           <?php if($GLOBALS['user']['user_id']): ?>
+           <div id="panel" class="panel-asGkf login-PEtQ box animated topfadeInUp" style="width:378px">
+            <i class="arrow-3XYp7 triangle"></i>
+            <div class="content_25Psf">
+             <div>
+              <div class="info-Y5T5e">
+               <a href="<?php echo mac_url('user/index'); ?>"><img src="<?php echo mac_get_user_portrait($user['user_id']); ?>" onerror="javascript:this.src='/static/images/touxiang.png'" class="vip-border" /></a>
+               <a href="<?php echo mac_url('user/index'); ?>" class="link-1zlt5" title="<?php echo $user['user_name']; ?>"><?php echo $user['user_name']; ?></a>
+               <a href="<?php echo mac_url('user/logout'); ?>" class="exit-login3-1Hc col0b col5b">退出</a>
+              </div>
+              <div class="list-1IMn">
+               <div class="title-4cHX col5">个人中心</div>
+               <div class="item-yVmpL last-item1MAEV">
+                   <div class="img-box1Tukq"><i class="fa fa-clock-o blue"></i></div>
+                   <a href="<?php echo mac_url('user/plays'); ?>" class="text-2jcMn col5b">我观看的</a>
+               </div>
+               <div class="item-yVmpL last-item1MAEV">
+                   <div class="img-box1Tukq"><i class="fa fa-heart-o blue"></i></div>
+                   <a href="<?php echo mac_url('user/favs'); ?>" class="text-2jcMn col5b">我的收藏</a>
+               </div>
+               <div class="item-yVmpL last-item1MAEV">
+                   <div class="img-box1Tukq"><i class="fa icon-kefufill blue"></i></div>
+                   <a href="<?php echo mac_url('user/info'); ?>" class="text-2jcMn col5b">安全中心</a>
+               </div>
+               <div class="item-yVmpL">
+                   <div class="img-box1Tukq"><i class="fa icon-account blue"></i></div>
+                   <a href="<?php echo mac_url('user/upgrade'); ?>" class="text-2jcMn col5b">VIP会员</a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <?php else: ?>
+           <div id="panel" class="panel-asGkf login-PEtQ box col5 animated topfadeInUp" style="width:198px">
+            <i class="arrow-3XYp7 triangle"></i>
+            <div class="content_25Psf">
+            <div class="logout-header"><div class="text-content">登录后可享受</div></div>
+            <div class="text-alink"><i class="fa fa-clock-o blue"></i>尊享极清观影体验</div>
+            <div class="text-alink"><i class="fa icon-crown blue"></i>同步多端播放记录</div>
+            <div class="text-alink"><i class="fa icon-hot blue"></i>热播精彩及时追</div>
+            <div class="button-area"><a href="<?php echo mac_url('user/login'); ?>"><button class="button">立即登录</button></a></div>
+            </div>
+           </div>
+           <?php endif; ?>  
+         </div>
+        </div>
+		</div>
+   </div>
+</div>
+<div id="block-B" data-focus="" class="qy-carousel-wrap">
+    <div class="qy-carousel">
+        <div class="qy-carousel-fixed">
+            <?php if($conch['dscms']['slide'] == 1): ?>
+            <div class="qy-carousel-inner bd">
+                <ul class="qy-carousel-ul">
+                    <?php $__TAG__ = '{"num":"8","level":"9","type":"current","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                    <li class="qy-carousel-li">
+                        <a href='<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>'><span class="qy-pc-carousel" style="background-image: url(<?php echo mac_url_img($vo['vod_pic_slide']); ?>);"></span></a>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </ul>
+                <div class="qy-carousel-maskl" style="background-image: linear-gradient(270deg, rgb(25, 26, 32) 0%, transparent);"></div>
+                <div class="qy-carousel-maskr" style="background-image: linear-gradient(270deg, rgb(25, 26, 32) 0%, transparent);"></div>
+                <div class="qy-carousel-maskbottom"></div>
+            </div>
+            <?php else: ?>
+            <div class="qy-carousel-inner wwp bd">
+                <ul class="qy-carousel-ul">
+                    <?php $__TAG__ = '{"num":"10","level":"9","type":"current","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                    <li class="qy-carousel-li">
+                        <a href='<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>'><span class="qy-carousel" style="background-image: url(<?php echo mac_url_img($vo['vod_pic_slide']); ?>);"></span></a>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </ul>
+                <div class="qy-carousel-maskl" style="background-image: linear-gradient(270deg, rgb(25, 26, 32) 0%, transparent);"></div>
+                <div class="qy-carousel-maskr" style="background-image: linear-gradient(270deg, rgb(25, 26, 32) 0%, transparent);"></div>
+                <div class="qy-carousel-maskbottom"></div>
+            </div>
+            <?php endif; ?>
+            <div class="qy-carousel-con-gray">
+                <div class="qy-carousel-side-panel hd wwp">
+                    <ul class="qy-carousel-panel-list">
+                        <?php $__TAG__ = '{"num":"10","level":"9","type":"current","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                        <li class="panel-item">
+                            <a href='<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>' target="_blank" class="panel-item-link">
+                            <p class="panel-item-title channelname"><?php echo $vo['vod_name']; ?></p>
+                            <p class="panel-item-dec channelname"><?php echo $vo['vod_sub']; ?></p>
+                            </a>
+                        </li>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="qy-nav-focus">
+        <div class="qy-nav-wrap wwp returl">
+            <div class="qy-nav-channel">
+                <div class="nav-channel-box">
+                    <div class="homepage_main_tabs_title">
+                        <div class="channel-box-inner"><a href="/index.php/vod/type/id/1.html" target="_blank" class="qy-nav-link"><span class="nav-en">MOVIES</span><span class="nav-name col1">电影</span></a></div>
+                        <div class="homepage_channel_video_wrap">
+                            <a class="homepage_title col4" href="/index.php/vod/type/id/1.html">更多电影<span class="fa fa-step-forward"></span></a>
+                            <?php $__TAG__ = '{"num":"4","type":"1","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                            <a href="<?php echo mac_url_vod_play($vo); ?>" class="homepage_video_wrap" title="<?php echo $vo['vod_name']; ?>"><img src="<?php echo mac_url_img($vo['vod_pic']); ?>" class="homepage_video_img" /><div class="homepage_video_title col1"><?php echo $vo['vod_name']; ?></div></a>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </div>
+                    </div>
+                    <div class="nav-text-box">
+                        <a href="/index.php/vod/show/area/大陆/id/1/year/2021.html" target="_blank" class="nav-text-link col4">影院新片</a>
+                        <a href="/index.php/vod/show/area/美国/id/1.html" target="_blank" class="nav-text-link col4">欧美大片</a>
+                    </div>
+                </div>
+                <div class="nav-channel-box">
+                    <div class="homepage_main_tabs_title">
+                        <div class="channel-box-inner"><a href="/index.php/vod/type/id/2.html" target="_blank" class="qy-nav-link"><span class="nav-en">TV SHOWS</span><span class="nav-name col1">电视剧</span></a></div>
+                        <div class="homepage_channel_video_wrap">
+                            <a class="homepage_title col4" href="/index.php/vod/type/id/2.html">更多剧集<span class="fa fa-step-forward"></span></a>
+                            <?php $__TAG__ = '{"num":"4","type":"2","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                            <a href="<?php echo mac_url_vod_play($vo); ?>" class="homepage_video_wrap" title="<?php echo $vo['vod_name']; ?>"><img src="<?php echo mac_url_img($vo['vod_pic']); ?>" class="homepage_video_img" /><div class="homepage_video_title col1"><?php echo $vo['vod_name']; ?></div></a>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </div>
+                    </div>
+                    <div class="nav-text-box">
+                        <a href="/index.php/vod/show/id/13.html" target="_blank" class="nav-text-link col4">中国大陆</a>
+                        <a href="/index.php/vod/show/id/15/year/2020.html" target="_blank" class="nav-text-link col4">最新韩剧</a>
+                    </div>
+                </div>
+                <div class="nav-channel-box">
+                    <div class="homepage_main_tabs_title">
+                        <div class="channel-box-inner"><a href="/index.php/vod/type/id/3.html" target="_blank" class="qy-nav-link"><span class="nav-en">VARIETY SHOWS</span><span class="nav-name col1">综艺</span></a></div>
+                        <div class="homepage_channel_video_wrap">
+                            <a class="homepage_title col4" href="/index.php/vod/type/id/3.html">更多综艺<span class="fa fa-step-forward"></span></a>
+                            <?php $__TAG__ = '{"num":"4","type":"3","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                            <a href="<?php echo mac_url_vod_play($vo); ?>" class="homepage_video_wrap" title="<?php echo $vo['vod_name']; ?>"><img src="<?php echo mac_url_img($vo['vod_pic']); ?>" class="homepage_video_img" /><div class="homepage_video_title col1"><?php echo $vo['vod_name']; ?></div></a>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </div>
+                    </div>
+                    <div class="nav-text-box">
+                        <a href="/index.php/vod/show/area/香港/id/3.html" target="_blank" class="nav-text-link col4">中国香港</a>
+                        <a href="/index.php/vod/show/area/日韩/id/3.html" target="_blank" class="nav-text-link col4">日韩综艺</a>
+                    </div>
+                </div>
+                <div class="nav-channel-box">
+                    <div class="homepage_main_tabs_title">
+                        <div class="channel-box-inner"><a href="/index.php/vod/type/id/4.html" target="_blank" class="qy-nav-link"><span class="nav-en">ANIME</span><span class="nav-name col1">动漫</span></a></div>
+                        <div class="homepage_channel_video_wrap">
+                            <a class="homepage_title col4" href="/index.php/vod/type/id/4.html">更多动漫<span class="fa fa-step-forward"></span></a>
+                            <?php $__TAG__ = '{"num":"4","type":"4","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                            <a href="<?php echo mac_url_vod_play($vo); ?>" class="homepage_video_wrap" title="<?php echo $vo['vod_name']; ?>"><img src="<?php echo mac_url_img($vo['vod_pic']); ?>" class="homepage_video_img" /><div class="homepage_video_title col1"><?php echo $vo['vod_name']; ?></div></a>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </div>
+                    </div>
+                    <div class="nav-text-box">
+                        <a href="/index.php/vod/show/area/日本/id/4.html" target="_blank" class="nav-text-link col4">国产动漫</a>
+                        <a href="/index.php/vod/show/area/大陆/id/4.html" target="_blank" class="nav-text-link col4">日本动漫</a>
+                    </div>
+                </div>
+                <div class="nav-channel-box">
+                    <div class="homepage_main_tabs_title">
+                        <div class="channel-box-inner"><a href="" target="_blank" class="qy-nav-link"><span class="nav-en">DOCUMENTARIES</span><span class="nav-name col1">纪录片</span></a></div>
+                    </div>
+                    <div class="nav-text-box">
+                        <a href="" target="_blank" class="nav-text-link col4">热播剧场</a>
+                        <a href="" target="_blank" class="nav-text-link col4">探索世界</a>
+                    </div>
+                </div>
+                <div class="nav-channel-box qy-navff">
+                    <div class="homepage_main_tabs_title">
+                        <div class="channel-box-inner"><a href="" target="_blank" class="qy-nav-link"><span class="nav-en">NARRATE</span><span class="nav-name col1">解说</span></a></div>
+                    </div>
+                    <div class="nav-text-box">
+                        <a href="" target="_blank" class="nav-text-link col4">热播大片</a>
+                        <a href="" target="_blank" class="nav-text-link col4">全部电影</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qy-nav-box qy-nav-wide">
+                <div class="qy-nav-list silde1">
+                    <a target="_blank" href="/index.php/vod/show/id/6.html" class="qy-nav-link"><span class="nav-name col1">动作</span></a>
+                    <a target="_blank" href="/index.php/vod/show/id/7.html" class="qy-nav-link"><span class="nav-name col1">喜剧</span></a>
+                </div>
+                <div class="qy-nav-list silde1">
+                    <a target="_blank" href="/index.php/vod/show/id/13.html" class="qy-nav-link"><span class="nav-name col1">国产剧</span></a>
+                    <a target="_blank" href="/index.php/vod/show/id/14.html" class="qy-nav-link"><span class="nav-name col1">港剧</span></a>
+                </div>
+                <div class="qy-nav-list silde1">
+                    <a target="_blank" href="/index.php/vod/show/id/8.html" class="qy-nav-link"><span class="nav-name col1">爱情</span></a>
+                    <a target="_blank" href="/index.php/vod/show/id/15.html" class="qy-nav-link"><span class="nav-name col1">韩剧</span></a>
+                </div>
+                <div class="qy-nav-list qy-navff silde1">
+                    <a target="_blank" href="/index.php/vod/show/id/9.html" class="qy-nav-link"><span class="nav-name col1">科幻</span></a>
+                    <a target="_blank" href="/index.php/vod/show/id/16.html" class="qy-nav-link"><span class="nav-name col1">美剧</span></a>
+                </div>
+                <div class="qy-nav-list silde1">
+                    <a target="_blank" href="<?php echo mac_url('actor/index'); ?>" class="qy-nav-link"><span class="nav-name col1">明星广场</span></a>
+                    <a target="_blank" href="<?php echo mac_url_topic_index(); ?>" class="qy-nav-link"><span class="nav-name col1">精选专题</span></a>
+                </div>
+                <div class="qy-nav-list" style="margin-right: 0px;">
+                    <a target="_blank" href="<?php echo mac_url('label/ivi'); ?>" class="qy-nav-link"><span class="nav-name col1">电视直播</span></a>
+                    <a target="_blank" href="<?php echo mac_url('label/jx'); ?>" class="qy-nav-link"><span class="nav-name col1">VIP解析</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">jQuery(".qy-carousel-fixed").slide({ mainCell:".bd ul",effect:"fold",autoPlay:true });</script>
+
+<div class="wwp indexboy">
+    <?php if($conch['dscms']['module']['0'] == index_level): ?>
+<div class="index-hotnow wow fadeInUp top20" style="overflow: hidden;">
+    <?php if($maccms['aid'] != 1): ?>
+    <div class="module-moduleheader cf ecinfolist">
+        <h2><span class="module-maintitle">热播推荐</span></h2>
+        <div class="tabs-nav l">
+            <a class="tabs-more col6" style="margin-left:0" href="javascript:;">今日更新 <span class="gxtag ecblue col1b"><?php echo mac_data_count($obj['type_id'],'today','vod'); ?></span> 部  共 <span class="gxtag ecblue col1b"><?php echo mac_data_count($obj['type_id'],'all','vod'); ?> </span>部</a>
+        </div>
+    </div>
+    <div class="hotgrow listdh" id="hotgrow">
+        <?php $__TAG__ = '{"num":"8","level":"1","type":"current","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+        <div class="pack-ykpack playhid<?php echo $key; ?>">
+            <div class="pack-packcover coverbox returl">
+                <a class="aplus-exp ecimgbor ec-jabj eclazy" data-original="<?php if($vo['vod_pic_thumb'] == ''): ?><?php echo mac_url_img($vo['vod_pic']); else: ?><?php echo mac_url_img($vo['vod_pic_thumb']); endif; ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy1']; ?>);" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?>" title="<?php echo $vo['vod_name']; ?>">
+                <div class="pack-bg"></div>
+                </a>
+                <span class="pack-prb"><?php echo mac_default($vo['vod_remarks'],$vo['vod_hits'].'播放'); ?></span>
+            </div>
+            <div class="pack-infolist">
+                <div class="pack-title ecinfolist">
+                    <a href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>"><?php echo $vo['vod_name']; ?></a>
+                </div>
+                <div class="pack-subtitle"><?php echo mac_filter_html(mac_default($vo['vod_actor'],$vo['vod_area'].$vo['type']['type_name'])); ?></div>
+            </div>
+        </div>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+    <?php else: ?>
+    <div class="hotgrow listdh" id="hotgrow">
+        <?php $__TAG__ = '{"num":"8","level":"1","type":"current","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+        <div class="pack-ykpack playhid<?php echo $key; ?>">
+            <div class="pack-packcover coverbox returl">
+                <a class="aplus-exp ecimgbor" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?>" title="<?php echo $vo['vod_name']; ?>">
+                <div class="ec-jabj eclazy" data-original="<?php if($vo['vod_pic_thumb'] == ''): ?><?php echo mac_url_img($vo['vod_pic']); else: ?><?php echo mac_url_img($vo['vod_pic_thumb']); endif; ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy1']; ?>);" ></div>
+            <div class="pack-bg"></div>
+            <span class="pack-prt"><span class="pack-packtag" style="background:#<?php echo $vo['vod_color']; ?>;"><?php echo (isset($vo['vod_tag']) && ($vo['vod_tag'] !== '')?$vo['vod_tag']:"精选"); ?></span></span><span class="pack-prb channelname" style="left: 8px;font-size: 14px;"><?php echo $vo['vod_name']; ?></span>
+            </a>
+        </div>
+    </div>
+    <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+    <?php endif; ?>
+</div>
+<?php endif; if($conch['dscms']['module']['1'] == index_hto): ?>
+<div class="index-hotnow wow fadeInUp" style="overflow: hidden;">
+    <div class="module-moduleheader cf ecinfolist">
+        <h2><span class="module-maintitle col1b">热播排行</span></h2>
+        <div class="tabs-nav l">
+            <a class="tabs-more col2" style="margin-left:0" href="javascript:;">今日更新 <span class="gxtag ecblue col1b"><?php echo mac_data_count($obj['type_id'],'today','vod'); ?></span> 部  共 <span class="gxtag ecblue col1b"><?php echo mac_data_count($obj['type_id'],'all','vod'); ?> </span>部</a>
+        </div>
+    </div>
+    <div class="hotgrow listdh" id="hotgrow">
+        <?php $__TAG__ = '{"num":"8","type":"all","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+        <div class="pack-ykpack playhid<?php echo $key; ?>">
+            <div class="pack-packcover coverbox returl">
+                <a class="aplus-exp ecimgbor ec-jabj eclazy" data-original="<?php echo mac_url_img($vo['vod_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy1']; ?>);" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?>" title="<?php echo $vo['vod_name']; ?>">
+                <div class="pack-bg"></div>
+                </a>
+                <span class="pack-prb"><?php echo mac_default($vo['vod_remarks'],$vo['vod_hits'].'播放'); ?></span>
+            </div>
+            <div class="pack-infolist">
+                <div class="pack-title ecinfolist">
+                    <a href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>"><?php echo $vo['vod_name']; ?></a>
+                </div>
+                <div class="pack-subtitle"><?php echo mac_filter_html(mac_default($vo['vod_actor'],$vo['vod_area'].$vo['type']['type_name'])); ?></div>
+            </div>
+        </div>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+</div>
+<?php endif; if($conch['dscms']['viptc'] == 1): ?><?php echo $conch['dscms']['aa01']; endif; if($conch['dscms']['module']['2'] == index_art): ?>
+<div class="ant-tabsbar">
+    <?php $__TAG__ = '{"ids":"5","order":"asc","by":"sort","id":"vo1","key":"key1"}';$__LIST__ = model("Type")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key1 = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($key1 % 2 );++$key1;?>
+    <div class="ant-tabscontent cf">
+        <h2 class="tabs-moduletitle l"><a href="<?php echo mac_url_type($vo1); ?>" title="娱乐资讯" class="tabs-maintitle l">娱乐资讯</a></h2>
+        <div class="tabs-nav l col7">
+            <a class="tabs-more col2" href="javascript:;">今日更新 <span class="gxtag ecorange col1b"><?php echo mac_data_count($obj['type_id'],'today','art'); ?></span> 篇  共 <span class="gxtag ecorange col1b"><?php echo mac_data_count($obj['type_id'],'all','art'); ?> </span>篇</a>
+            <?php $__TAG__ = '{"num":"5","parent":"'.$vo1['type_id'].'","order":"asc","by":"sort","id":"vo2","key":"key2"}';$__LIST__ = model("Type")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key2 = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($key2 % 2 );++$key2;?>
+            <a class="col2b" href="<?php echo mac_url_type($vo2); ?>" title=""><?php echo $vo2['type_name']; ?></a><i class="slash">|</i>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+            <a class="col2b" href="<?php echo mac_url_type($vo1); ?>">更多 &gt;</a>
+        </div>
+    </div>
+    <?php endforeach; endif; else: echo "" ;endif; ?>
+</div>
+<div class="indexart">
+    <div class="hotpack-ykpack wow fadeInLeft">
+        <?php $__TAG__ = '{"num":"1","type":"current","level":"1","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Art")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+        <div class="pack-packcover">
+            <a class="aplus-exp ecimgbor" href="<?php echo mac_url_art_detail($vo); ?>" title="<?php echo mac_filter_html($vo['art_name']); ?>"><img src="<?php echo mac_url_img($vo['art_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy2']; ?>);" />
+                <div class="pack-bg"></div><span class="pack-prb"><span><?php echo date('Y-m-d',$vo['art_time']); ?></span></span>
+            </a>
+        </div>
+        <div class="hotpack-infolist pack-infolist"><?php echo mac_filter_html($vo['art_name']); ?></div>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+    <div class="hotgrow wow fadeInRight" id="hotgrow">
+        <?php $__TAG__ = '{"num":"12","type":"current","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Art")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+        <div class="pack-ykpack arthide<?php echo $key; ?>">
+            <div class="pack-packcover coverbox">
+                <a class="aplus-exp ec-jakt eclazy" href="<?php echo mac_url_art_detail($vo); ?>" title="<?php echo mac_filter_html($vo['art_name']); ?>" data-original="<?php echo mac_url_img($vo['art_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy2']; ?>);">
+                    <div class="pack-bg"></div>
+                </a>
+                <span class="pack-prb"><?php echo $vo['type']['type_name']; ?></span>
+            </div>
+            <div class="pack-infolist">
+                <div class="pack-title ecinfolist">
+                    <a href="<?php echo mac_url_art_detail($vo); ?>" title="<?php echo mac_filter_html($vo['art_name']); ?>" class="channelname"><?php echo mac_filter_html($vo['art_name']); ?></a>
+                </div>
+                <div class="pack-subtitle col4c channelname"><?php echo date('Y-m-d',$vo['art_time']); ?></div>
+            </div>
+        </div>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+</div>
+<?php endif; if($conch['dscms']['module']['3'] == index_taobao): ?>
+<div class="wow fadeInUp top20">
+<div class="ant-tabsbar">
+    <div class="ant-tabscontent cf">
+        <h2 class="tabs-moduletitle l"><a href="<?php echo $conch['dscms']['taobaoul']; ?>" title="商品推荐" class="tabs-maintitle l">商品推荐</a></h2>
+        <div class="tabs-nav l col7">
+            <a class="col2b" href="<?php echo $conch['dscms']['taobaoul']; ?>">更多 &gt;</a>
+        </div>
+    </div>
+</div>
+<?php
+error_reporting(0);
+ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322)');
+header('Content-Type:text/html;charset=UTF-8');
+$mkcms_dataoke = $conch['dscms']['taobaoul'];
+function get_between($input, $start, $end) {
+  $substr = substr($input, strlen($start)+strpos($input, $start),
+ (strlen($input) - strpos($input, $end))*(-1));
+  return $substr;
+}
+$durl=$mkcms_dataoke."/index.php?r=l&page=1&limit=8";
+$hurl=file_get_contents($durl);
+$json=get_between($hurl,'lsitData=[','var detailUrl=');
+$json=str_replace(";","",$json);
+$json="[".$json;
+$html=json_decode($json, true);
+?>
+<div class="taobaoke listdh" style="margin-bottom: 28px;">
+    <?php foreach ($html as $cc => $dd) { ?>
+    <a target="_blank" class="goods_list ebybj" href="<?php echo $conch['dscms']['taobaoul']; ?>index.php?r=l/d&u=587183&id=<?= $dd[id]  ?>&from=dtk">
+        <div class="img ec-jakt eclazy" data-original="<?= $dd[pic]  ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy2']; ?>);"></div>
+        <div class="content">
+            <p class="co_tit"><span class="siz channelname"><i class="tag-tmall" title="天猫"></i><?= $dd[d_title]  ?></span></p>
+            <div class="price cf">
+                <div class="tip"></div>
+                <i class="p">￥</i>
+                <span><?= $dd[jiage]  ?></span>
+                <b class="fr r"><i><?= $dd[quan_jine]  ?></i>元券</b>
+            </div>
+        </div>
+    </a>
+    <?php } ?>
+</div>
+</div>
+<style>
+    .taobaoke .content{padding: 10px;}
+    .taobaoke .goods_list{background-color:#25252b;display:inline-block;box-sizing:border-box;vertical-align:top;width:206.5px;margin-right:16px;border-radius:4px}
+    .taobaoke .img{width:100%;height:206px;border-radius: 4px 4px 0 0;}
+    .taobaoke .siz{color:hsla(0,0%,100%,.87);line-height:22px;font-size:16px;display:block;height:22px}
+    .taobaoke .goods_list .content .co_tit .tag-tmall{background:url(https://cmsstatic.ffquan.cn/images/home/tmall.png?v=2020111432252) center no-repeat;background-size:contain;height:22px;width:15px;float:left;margin:0 5px 0 0}
+    .taobaoke .price{color:#ebba73;font-size:18px;height:35px;line-height:35px;margin:5px 0 0 -4px}
+    .taobaoke .goods_list .content .price b{color:#fc4d52;border:1px solid #fc4d52;line-height:14px;font-size:12px;border-radius:2px;font-weight:400;padding:2px 7px;margin:9px 0;position:relative;min-width:57px;text-align:center;box-sizing:border-box;height:19px}
+    @media (max-width:1789px) and (min-width:1592px){.taobaoke .goods_list{width:178.7px}
+        .taobaoke .img{height:178px}
+    }
+    @media (max-width:1591px) and (min-width:1330px){.taobaoke .goods_list{width:191.6px}
+        .taobaoke .img{height:191px}
+        .taobaoke{overflow:hidden;height:273px}
+    }
+    @media (max-width:1329px){.taobaoke .goods_list{width:176.6px}
+        .taobaoke .img{height:176.6px}
+        .taobaoke{overflow:hidden;height:257px}
+    }
+</style>
+<?php endif; $__TAG__ = '{"ids":"'.$conch['dscms']['logtype'].'","order":"asc","by":"sort","mid":"1","id":"vo3","key":"key"}';$__LIST__ = model("Type")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo3): $mod = ($key % 2 );++$key;?>
+<div class="cf pageconnt palyconnt top20">
+    <div class="public wow fadeInUp l">
+        <div class="ant-tabsbar">
+            <div class="ant-tabscontent cf">
+                <h2 class="tabs-moduletitle l"><a href="<?php echo mac_url_type($vo3,[],'show'); ?>" title="<?php echo $vo3['type_name']; ?>" class="tabs-maintitle l"><?php echo $vo3['type_name']; ?></a></h2>
+                <div class="tabs-nav l col7">
+                    <?php $__TAG__ = '{"parent":"'.$vo3['type_id'].'","order":"asc","by":"sort","id":"vo4","key":"key4"}';$__LIST__ = model("Type")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key4 = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo4): $mod = ($key4 % 2 );++$key4;?>
+                    <a class="col2b" href="<?php echo mac_url_type($vo4,[],'show'); ?>" title=""><?php echo $vo4['type_name']; ?></a><i class="slash">|</i>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                    <a class="col2b" href="<?php echo mac_url_type($vo3,[],'show'); ?>">更多 &gt;</a>
+                </div>
+                <div class="pagebnt r">
+                    <a class="bnt <?php echo $vo3['type_en']; ?>prevf disable" onclick="inprev('<?php echo $vo3['type_en']; ?>')"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="leftarrow_cu"><path d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm2.439 4.95a1.429 1.429 0 0 0-2.02 0L5.367 10l5.05 5.05.125.112c.56.444 1.378.407 1.896-.111l.11-.125a1.429 1.429 0 0 0-.11-1.896L9.409 10l3.03-3.03.11-.125a1.429 1.429 0 0 0-.11-1.896z"></path></svg></a>
+                    <a class="bnt <?php echo $vo3['type_en']; ?>nextf" onclick="innext('<?php echo $vo3['type_en']; ?>')"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="rightarrow_cu"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM7.561 4.95a1.429 1.429 0 0 1 2.02 0L14.633 10l-5.05 5.05-.125.112a1.429 1.429 0 0 1-1.896-.111l-.11-.125a1.429 1.429 0 0 1 .11-1.896l3.03-3.03-3.03-3.03-.11-.125a1.429 1.429 0 0 1 .11-1.896z"></path></svg></a>
+                </div>
+            </div>
+        </div>
+        <div id="<?php echo $vo3['type_en']; ?>1" class="hotgrow eclist listdh">
+            <?php $__TAG__ = '{"num":"'.($conch['dscms']['hnum']*2+2).'","type":"'.$vo3['type_id'].'","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+            <div class="pack-ykpack vodhid<?php echo $key; ?>">
+    <div class="pack-packcover ebybj">
+        <a class="aplus-exp" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>">
+        <div class="ec-jabj eclazy" data-original="<?php echo mac_url_img($vo['vod_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy1']; ?>);"></div>
+        <div class="pack-bg"></div>
+        <span class="pack-prb"><span><?php echo mac_default($vo['vod_remarks'],$vo['vod_hits'].'播放'); ?></span></span>
+        </a>
+        <span class="vodlist_top">
+            <em class="voddate voddate_year"><?php echo $vo['vod_year']; ?></em>
+            <em class="voddate voddate_type"><?php echo mac_substring($vo['vod_class'],2); ?></em>
+        </span>
+    </div>
+    <div class="pack-infolist">
+        <div class="pack-title ecinfolist">
+            <a class="channelname" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>"><?php echo $vo['vod_name']; ?></a>
+        </div>
+        <div class="pack-subtitle col4c"><?php echo mac_filter_html(mac_default($vo['vod_actor'],$vo['vod_area'].$vo['type']['type_name'])); ?></div>
+    </div>
+</div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+        <div id="<?php echo $vo3['type_en']; ?>2" class="hotgrow eclist listdh" style="display:none">
+            <?php $__TAG__ = '{"num":"'.($conch['dscms']['hnum']*2+2).'","type":"'.$vo3['type_id'].'","start":"8","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+            <div class="pack-ykpack vodhid<?php echo $key; ?>">
+    <div class="pack-packcover ebybj">
+        <a class="aplus-exp" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>">
+        <div class="ec-jabj eclazy" data-original="<?php echo mac_url_img($vo['vod_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy1']; ?>);"></div>
+        <div class="pack-bg"></div>
+        <span class="pack-prb"><span><?php echo mac_default($vo['vod_remarks'],$vo['vod_hits'].'播放'); ?></span></span>
+        </a>
+        <span class="vodlist_top">
+            <em class="voddate voddate_year"><?php echo $vo['vod_year']; ?></em>
+            <em class="voddate voddate_type"><?php echo mac_substring($vo['vod_class'],2); ?></em>
+        </span>
+    </div>
+    <div class="pack-infolist">
+        <div class="pack-title ecinfolist">
+            <a class="channelname" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>"><?php echo $vo['vod_name']; ?></a>
+        </div>
+        <div class="pack-subtitle col4c"><?php echo mac_filter_html(mac_default($vo['vod_actor'],$vo['vod_area'].$vo['type']['type_name'])); ?></div>
+    </div>
+</div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+        <div id="<?php echo $vo3['type_en']; ?>3" class="hotgrow eclist listdh" style="display:none">
+            <?php $__TAG__ = '{"num":"'.($conch['dscms']['hnum']*2+2).'","type":"'.$vo3['type_id'].'","start":"17","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+            <div class="pack-ykpack vodhid<?php echo $key; ?>">
+    <div class="pack-packcover ebybj">
+        <a class="aplus-exp" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>">
+        <div class="ec-jabj eclazy" data-original="<?php echo mac_url_img($vo['vod_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy1']; ?>);"></div>
+        <div class="pack-bg"></div>
+        <span class="pack-prb"><span><?php echo mac_default($vo['vod_remarks'],$vo['vod_hits'].'播放'); ?></span></span>
+        </a>
+        <span class="vodlist_top">
+            <em class="voddate voddate_year"><?php echo $vo['vod_year']; ?></em>
+            <em class="voddate voddate_type"><?php echo mac_substring($vo['vod_class'],2); ?></em>
+        </span>
+    </div>
+    <div class="pack-infolist">
+        <div class="pack-title ecinfolist">
+            <a class="channelname" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>"><?php echo $vo['vod_name']; ?></a>
+        </div>
+        <div class="pack-subtitle col4c"><?php echo mac_filter_html(mac_default($vo['vod_actor'],$vo['vod_area'].$vo['type']['type_name'])); ?></div>
+    </div>
+</div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+    </div>
+    <div class="ecmod-wrap r ecright" style="width: 206px;">
+        <div class="ecmod-title">
+            <h3 class="mod-title anthology-wrap col1b">风云榜
+                <div class="ecrank-enter">
+                    <a href="<?php echo mac_url('label/rank'); ?>" class="rank-enter-link col2b"><span class="more">全部&nbsp;</span><i class="fa fa-step-forward"></i></a>
+                </div>
+            </h3>
+        </div>
+        <div class="qy-mod-rank-des-min">
+            <ul class="rank-list">
+                <?php $__TAG__ = '{"num":"'.($conch['dscms']['hnum']*2).'","type":"'.$vo3['type_id'].'","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Vod")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+                <li class="rank-item cf hothide<?php echo $key; ?>"><a style="padding: 12px 0;" href="<?php if($conch['dscms']['gx']['btn'] == 1): ?><?php echo mac_url_vod_play($vo,['sid'=>$vo['sid'],'nid'=>1]); else: ?><?php echo mac_url_vod_detail($vo); endif; ?>" class="rank-item-link" title="<?php echo $vo['vod_name']; ?><?php echo $conch['dscms']['seo']['votitle']; ?>">
+                    <div class="mod-left" style="margin-right: 10px;">
+                        <div class="rank-num-box" style="width: 40px;">
+                            <?php if($key<=3): ?><span style="font-size: 34px;" class="ecrank-no No1">NO</span><?php endif; ?><i style="font: 600 30px/34px Impact;" class="rank-nub col7 loadia<?php echo $key; ?>"><?php echo $key; ?></i>
+                        </div>
+                    </div>
+                    <div class="mod-right">
+                        <h3 class="anthology-wrap main-title" style="margin-bottom: 5px;"><?php echo $vo['vod_name']; ?></h3>
+                        <div class="col2">
+                            <i class="fa icon-hotfill ecsvgicon-hot"></i><span class="count"><?php echo $vo['vod_hits']; ?></span>
+                        </div>
+                    </div>
+                    </a></li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ul>
+        </div>
+    </div>
+    <div></div>
+</div>
+<?php endforeach; endif; else: echo "" ;endif; if($conch['dscms']['viptc'] == 1): ?><?php echo $conch['dscms']['aa02']; endif; ?>
+    <div class="wow fadeInUp">
+<?php if($conch['dscms']['module']['5'] == index_actor): ?>
+<div class="ant-tabsbar top20">
+    <div class="ant-tabscontent cf">
+        <h2 class="tabs-moduletitle l"><a href="<?php echo mac_url('actor/index'); ?>" title="荧幕星榜" class="tabs-maintitle l">荧幕星榜</a></h2>
+        <div class="tabs-nav l col7">
+            <?php $__TAG__ = '{"num":"10","level":"1","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Actor")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+            <a class="col2b" href="<?php echo mac_url_actor_detail($vo); ?>" title=""><?php echo $vo['actor_name']; ?></a><i class="slash">|</i>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+            <a class="col2b" href="<?php echo mac_url('actor/index'); ?>">更多 &gt;</a>
+        </div>
+    </div>
+</div>
+<?php if($conch['dscms']['indexactor'] == 0): ?>
+<div class="ecmingxbj ec-lf13">
+    <div class="cf ecmingxingbj">
+        <?php $__TAG__ = '{"num":"10","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Actor")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+        <div class="star-upitem actorhide<?php echo $key; ?>">
+            <a title="<?php echo $vo['actor_name']; ?><?php echo $conch['dscms']['seo']['actitle']; ?>" href="<?php echo mac_url_actor_detail($vo); ?>">
+                <span class="star-upimgbj"></span>
+                <span class="star-upimgbox"><div class="star-up-img ec-jaus eclazy" data-original="<?php echo mac_url_img($vo['actor_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy3']; ?>);"></div></span>
+                <span class="star-up-name"><?php echo $vo['actor_name']; ?></span><span class="star-up-desc col4c"><span> <?php echo $vo['actor_up']; ?></span>影响力</span>
+            </a>
+        </div>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+</div>
+<?php endif; if($conch['dscms']['indexactor'] == 1): ?>
+<div class="panda-show">
+    <?php $__TAG__ = '{"num":"7","order":"desc","by":"hits","id":"vo","key":"key"}';$__LIST__ = model("Actor")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+    <div class="swiper-slide rank-item actor<?php echo $key; ?>">
+        <a href="<?php echo mac_url_actor_detail($vo); ?>" title="<?php echo $vo['actor_name']; ?><?php echo $conch['dscms']['seo']['actitle']; ?>" target="_blank">
+            <img src="<?php echo (isset($vo['actor_pic']) && ($vo['actor_pic'] !== '')?$vo['actor_pic']:$conch['dscms']['gx']['lazy3']); ?>" />
+            <div class="shuffer-line"></div>
+            <div class="stars-info">
+                <div class="name"><?php echo $vo['actor_name']; ?></div>
+                <div class="intro"><?php echo mac_default($vo['actor_birthday'],$vo['actor_en']); ?></div>
+                <div class="number"><i></i><?php echo $vo['actor_up']; ?></div>
+            </div>
+        </a>
+    </div>
+    <?php endforeach; endif; else: echo "" ;endif; ?>
+</div>
+<?php endif; endif; ?>
+</div>
+    <?php if($conch['dscms']['module']['4'] == index_zhibo): ?>
+<div class="wow fadeInUp">
+<div class="ant-tabsbar top20">
+    <div class="ant-tabscontent cf">
+        <h2 class="tabs-moduletitle l"><a href="<?php echo $conch['dscms']['zhiboul']; ?>" title="直播" class="tabs-maintitle l">直播</a></h2>
+        <div class="tabs-nav l col7">
+            <a class="col2b" href="<?php echo $conch['dscms']['zhiboul']; ?>">更多 &gt;</a>
+        </div>
+    </div>
+</div>
+<div class="hotgrow listdh zhiblist">
+<?php
+$url="https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=1";
+$json=mac_curl_get($url);
+$html=json_decode($json, true);
+$datas=$html[data][datas];
+$data=$html[data];
+for($i=0;$i<16;$i++){?>
+    <div class="pack-ykpack zhib<?php echo $i; ?>">
+        <div class="pack-packcover coverbox">
+            <a class="aplus-exp ec-jabj eclazy" href="/index.php/label/zb/id/<?php echo $datas[$i]['profileRoom']?>.html" data-original="<?php echo $datas[$i]['screenshot'];?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy1']; ?>);">
+                <div class="pack-bg"></div>
+            </a>
+        </div>
+        <div class="pack-infolist">
+            <div class="pack-title ecinfolist">
+                <a class="channelname" href="/index.php/label/zb/id/<?php echo $datas[$i]['profileRoom']?>.html"><?php echo $datas[$i]['roomName'];?></a>
+            </div>
+            <div class="pack-subtitle col4c">主播:<?php echo $datas[$i]['nick'];?></div>
+        </div>
+    </div>
+<?php }
+?>
+</div>
+</div>
+<?php endif; if($conch['dscms']['module']['6'] == index_topic): ?>
+<div class="wow fadeInUp top20">
+<div class="ant-tabsbar">
+    <div class="ant-tabscontent cf">
+        <h2 class="tabs-moduletitle l"><a href="<?php echo mac_url_topic_index(); ?>" title="最新专题" class="tabs-maintitle l">最新专题</a></h2>
+        <div class="tabs-nav l col7">
+            <?php $__TAG__ = '{"num":"4","level":"1","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Topic")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+            <a class="col2b" href="<?php echo mac_url_topic_detail($vo); ?>" title=""><?php echo $vo['topic_name']; ?></a><i class="slash">|</i>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+            <a class="col2b" href="<?php echo mac_url_topic_index(); ?>">更多 &gt;</a>
+        </div>
+    </div>
+</div>
+<div class="recommend-album-list listdh">
+    <?php $__TAG__ = '{"num":"5","order":"desc","by":"time","id":"vo","key":"key"}';$__LIST__ = model("Topic")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+    <div class="ectopdichid">
+    <a class="ectopica eclazy" href="<?php echo mac_url_topic_detail($vo); ?>" data-original="<?php echo mac_url_img($vo['topic_pic']); ?>" style="background-image: url(<?php echo $conch['dscms']['gx']['lazy2']; ?>);">
+        <div class="ectopicnew">
+            <span class="ectopicspn"><i class="fa fa-bookmark-o"></i>  专题</span>
+            <span class="ectopicspn">—— <?php if($vo['topic_rel_vod']|count!=0): ?><?php echo count(explode(',',$vo['topic_rel_vod'])); ?>个影片<?php else: ?><?php echo count(explode(',',$vo['topic_rel_art'])); ?>篇文章<?php endif; ?> ——</span>
+            <span class="ectopicspn channelname"><?php echo $vo['topic_name']; ?></span>
+        </div>
+    </a>
+</div>
+    <?php endforeach; endif; else: echo "" ;endif; ?>
+</div>
+</div>
+<?php endif; if($conch['dscms']['module']['7'] == index_hezuo): ?>
+    <div class="ec-link top20 wow fadeInUp">
+        <h2 class="link-tile black col1b">合作伙伴</h2>
+        <div class="stui-pannel_bd listdh">
+            <ul class="stui-link-pic cf">
+    <li class="col-md">
+        <a href="http://vip.9aeng.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/1905.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://v.qq.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/qq.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.youku.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/youku.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.iqiyi.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/iqiyi.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://v.sohu.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/sohu.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.mgtv.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/mg.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.pptv.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/pptv.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.tudou.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/tudou.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.letv.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/letv.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.ku6.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/ku6.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="https://v.wasu.cn/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/wasu.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.kankan.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/kankan.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.baofeng.com/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/baofeng.png"> </a>
+    </li>
+    <li class="col-md">
+        <a href="http://www.fun.tv/" target="_blank" title=""> <img src="<?php echo $maccms['path_tpl']; ?>images/logo/fengxing.png"> </a>
+    </li>
+
+</ul>
+<style>
+    .col-md{padding-bottom:.8%;padding-right:.38%;width:13.9%;float:left}
+    .stui-link-pic li a{background-color:#25252b;border:1px solid #25252b;display:block;padding:10px 20px;border-radius:4px}
+    .stui-link-pic li a img{max-width:100%}
+    .stui-link-pic li a:hover{
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+</style>
+        </div>
+    </div>
+    <?php endif; ?>
+    <div class="ec-link top20">
+    <h2 class="link-tile black col1b">友情链接</h2>
+    <div>
+        <?php $__TAG__ = '{"order":"desc","by":"sort","type":"all","id":"vo","key":"key"}';$__LIST__ = model("Link")->listCacheData($__TAG__); if(is_array($__LIST__['list']) || $__LIST__['list'] instanceof \think\Collection || $__LIST__['list'] instanceof \think\Paginator): $key = 0; $__LIST__ = $__LIST__['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($key % 2 );++$key;?>
+        <a href="<?php echo $vo['link_url']; ?>" target="_blank"><?php echo $vo['link_name']; ?></a>
+		<a href="https://www.lengcat.com" target="_blank">冷猫资源网</a>
+		<a href="https://vip.9aeng.com" target="_blank">MuX视频解析</a>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
+</div>
+</div>
+<footer class="ec-footer">
+    <div class="footer-content wwp [wap]">
+        <?php if($maccms['aid'] == 1): ?>
+        <div class="footer-company">
+            <div class="company-col company-col-40">
+                <p class="cate-title black">关于我们</p>
+                <ul class="cate-list">
+                    <li class="list-item"><a href="#" title="公司介绍" target="_blank" class="link black">公司介绍</a><a href="#" title="新闻动态" target="_blank" class="link black">新闻动态</a></li>
+                    <li class="list-item"><a href="#" title="联系方式" target="_blank" class="link black">联系方式</a><a href="#" title="人才招聘" target="_blank" class="link black">人才招聘</a></li>
+                    <li class="list-item"><a href="#" title="Investor Relations" target="_blank" class="link black">Investor Relations</a><a href="#" title="Media Center" target="_blank" class="link black">Media Center</a></li>
+                </ul>
+            </div>
+            <div class="company-col company-col-40">
+                <p class="cate-title black">生态合作</p>
+                <ul class="cate-list">
+                    <li class="list-item"><a href="https://vip.9aeng.com" title="MuX视频json解析" target="_blank" class="link black">MuX视频json解析</a><a href="https://vip.9aeng.com" title="MuX视频json解析" target="_blank" class="link black">MuX视频json解析</a></li>
+                    <li class="list-item"><a href="https://vip.9aeng.com" title="MuX视频json解析" target="_blank" class="link black">MuX视频json解析</a><a href="https://vip.9aeng.com" title="MuX视频json解析" target="_blank" class="link black">MuX视频json解析</a></li>
+                    <li class="list-item"><a href="https://vip.9aeng.com" title="MuX视频json解析" target="_blank" class="link black">MuX视频json解析</a><a href="https://vip.9aeng.com" title="MuX视频json解析" target="_blank" class="link black">MuX视频json解析</a></li>
+                </ul>
+            </div>
+            <div class="company-col company-col-20">
+                <p class="cate-title black">服务</p>
+                <ul data-v-7aff78ea="" class="cate-list">
+                    <li class="list-item"><a href="#" title="用户协议" target="_blank" class="link black">用户协议</a><a href="#" title="隐私政策" target="_blank" class="link black">隐私政策</a></li>
+                    <li class="list-item"><a href="#" title="帮助与反馈" target="_blank" class="link black">帮助与反馈</a><a href="#" title="侵权举报与投诉" target="_blank" class="link black">侵权举报与投诉</a></li>
+                </ul>
+            </div>
+        </div>
+        <?php endif; ?>
+        <div class="footer-law">
+            <ul class="law-list">
+                <li class="law-item"><a href="#" title="营业执照" target="_blank" class="law-link">营业执照</a></li>
+                <li class="law-item"><span title="京网文[2018]6272-484号" class="law-link">京网文[2018]6272-484号</span></li>
+                <li class="law-item"><a href="#" title="信息网络传播视听节目许可证 0110544号" target="_blank" class="law-link">信息网络传播视听节目许可证 0110544号</a></li>
+                <li class="law-item"><span title="广播电视节目制作经营许可证 (京)字第1938号" class="law-link">广播电视节目制作经营许可证 (京)字第1938号</span></li>
+                <li class="law-item"><a href="https://www.itrust.org.cn/search_k.php" title="中国互联网诚信联盟" target="_blank" class="law-link"><img src="<?php echo $maccms['path_tpl']; ?>images/2b55d4f62a2244fa86d7357e5e981740.png"> 中国互联网诚信联盟</a></li>
+                <li class="law-item"><span title="出版物经营许可证" class="law-link">出版物经营许可证</span></li>
+                <li class="law-item"><a href="http://beian.miit.gov.cn/" title="京ICP备11032965号" target="_blank" class="law-link">京ICP备11032965号</a></li>
+                <li class="law-item"><a href="http://beian.miit.gov.cn/" title="经营性网站备案信息" target="_blank" class="law-link"><img src="<?php echo $maccms['path_tpl']; ?>images/2ccb3bc352c4411fa6098ab02fa8ac71.png"> 经营性网站备案信息</a></li>
+                <li class="law-item"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002002047" title="京公网安备 11000002002047号" target="_blank" class="law-link">京公网安备 11000002002047号</a></li>
+                <li class="law-item"><span title="增值电信业务经营许可证 B2-20120273" class="law-link unlink">增值电信业务经营许可证 B2-20120273</span></li>
+                <li class="law-item"><span title="互联网药品信息服务资格证书" class="law-link">互联网药品信息服务资格证书</span></li>
+                <li class="law-item"><span title="食品经营许可证 JY11108111598788" class="law-link">食品经营许可证 JY11108111598788</span></li>
+                <li class="law-item"><a href="//www.12377.cn/" title="网上有害信息举报专区" target="_blank" class="law-link">网上有害信息举报专区</a></li>
+                <li class="law-item"><a href="https://www.12377.cn/node_548446.htm" title="网络举报APP下载" target="_blank" class="law-link">网络举报APP下载</a></li>
+                <li class="law-item"><a href="https://www.12377.cn/node_548446.htm" title="反盗版和反盗链权利声明" target="_blank" class="law-link">反盗版和反盗链权利声明</a></li>
+                <li class="law-item"><span title="违法和不良信息举报电话：400-923-7171" class="law-link unlink">违法和不良信息举报电话：400-923-7171</span></li>
+                <li class="law-item"><a href="#" title="举报邮箱：jubao365@qiyi.com" target="_blank" class="law-link">举报邮箱：jubao365@qiyi.com</a></li>
+                <li class="law-item"><span></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="qy-scroll-anchor">
+        <ul class="scroll-anchor">
+            <li class="anchor-list">
+                <a href="javascript:;" id="theme" title="主题颜色" class="anchor-item">
+                    <i class="fa icon-emojilight"></i>
+                    <span class="anchor-txt">主题颜色</span>
+                </a>
+            </li>
+            <li class="anchor-list">
+                <a href="<?php echo mac_url('gbook/index'); ?>" title="帮助中心" target="_blank" class="anchor-item">
+                    <i class="fa icon-kefufill"></i>
+                    <span class="anchor-txt">帮助中心</span>
+                </a>
+            </li>
+            <li id="scrollUp" class="anchor-list">
+                <a href="javascript:;" title="返回顶部" target="_blank" class="anchor-item">
+                    <i class="fa icon-xiangshang2"></i>
+                    <span class="anchor-txt">返回顶部</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="zbclolor" id="themebox" style="display: none;">
+        <div class="mac_pop_bg"></div>
+        <div class="themes animated fadeInUp box" style="width: 296px; height: 190px; display: block;">
+            <div class="cf" style="margin-bottom: 20px;padding: 0 4px;"><h2>主题颜色</h2><span class="pop_close fa fa-remove"></span></div>
+            <div class="bglist cf">
+                <div id="skin_0" class="selected">默认</div>
+                <div id="skin_1">蓝色</div>
+                <div id="skin_2">粉色</div>
+                <div id="skin_3">炫彩</div>
+                <div id="skin_4">紫色</div>
+                <div id="skin_5">橙色</div>
+                <div id="skin_6">浅蓝</div>
+                <div id="skin_7">深色</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<?php if($conch['dscms']['gx']['debugging'] == 1): ?><script src="<?php echo $maccms['path_tpl']; ?>js/debugging.js"></script><?php endif; ?>
+</body>
+</html>
